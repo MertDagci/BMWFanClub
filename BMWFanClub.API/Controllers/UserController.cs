@@ -18,6 +18,7 @@ namespace ServisTakip.API.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Post([FromForm] MUser.Form form)
         {
             try

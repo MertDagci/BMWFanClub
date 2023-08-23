@@ -8,6 +8,8 @@ using BMWFanClub.Enums;
 using BMWFanClub.Interfaces;
 using BMWFanClub.Repositories;
 using System.Text;
+using BMWFanClub.Data.MySQL;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 

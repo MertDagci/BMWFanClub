@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BMWFanClub.Data
+namespace BMWFanClub.Data.MySQL
 {
     public class User : Base
     {

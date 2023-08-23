@@ -1,4 +1,5 @@
 ﻿using BMWFanClub.Data;
+using BMWFanClub.Data.MySQL;
 using BMWFanClub.Enums;
 using BMWFanClub.InAndOutModel;
 using BMWFanClub.Interfaces;
@@ -20,7 +21,7 @@ namespace BMWFanClub.Repositories
             {
                 MethodResponse<MUser.Response> mr = new MethodResponse<MUser.Response>();
 
-                //var currentUser = _context.users.Where(k => k.Id == currentUserId && k.IsDeleted == EuIsDeleted.No).FirstOrDefault();
+                //var currentUser = _context.Users.Where(k => k.Id == currentUserId && k.IsDeleted == EuIsDeleted.No).FirstOrDefault();
                 //if (currentUser == null)
                 //{
                 //    mr.Status = 400;
@@ -60,7 +61,7 @@ namespace BMWFanClub.Repositories
                 user.CreatedBy = currentUserId;
                 user.CreatedOn = DateTime.Now;
 
-                _context.users.Add(user);
+                _context.Users.Add(user);
                 _context.SaveChanges();
                 #endregion
 
@@ -89,15 +90,15 @@ namespace BMWFanClub.Repositories
             try
             {
                 MethodResponse<string> mr = new MethodResponse<string>();
-                var currentUser = _context.users.Where(k => k.Id == currentUserId && k.IsDeleted == EuIsDeleted.No).FirstOrDefault();
+                var currentUser = _context.Users.Where(k => k.Id == currentUserId && k.IsDeleted == EuIsDeleted.No).FirstOrDefault();
                 if (currentUser == null)
                 {
                     mr.Status = 400;
                     mr.StatusTexts.Add("Kullanıcı bulunamadı!");
                     return await Task.FromResult(mr);
                 }
-                var user = _context.users.Where(k => k.Id == id && k.IsDeleted == EuIsDeleted.No).FirstOrDefault();
-                //var usera = _context.users.FirstOrDefault(k => k.Id == id && k.IsDeleted == false);
+                var user = _context.Users.Where(k => k.Id == id && k.IsDeleted == EuIsDeleted.No).FirstOrDefault();
+                //var usera = _context.Users.FirstOrDefault(k => k.Id == id && k.IsDeleted == false);
                 if (user == null)
                 {
                     mr.Status = 400;
@@ -130,7 +131,7 @@ namespace BMWFanClub.Repositories
             try
             {
                 MethodResponse<List<MUser.Response>> mr = new MethodResponse<List<MUser.Response>>();
-                var currentUser = _context.users.Where(k => k.Id == currentUserId && k.IsDeleted == EuIsDeleted.No).FirstOrDefault();
+                var currentUser = _context.Users.Where(k => k.Id == currentUserId && k.IsDeleted == EuIsDeleted.No).FirstOrDefault();
                 if (currentUser == null)
                 {
                     mr.Status = 400;
@@ -138,7 +139,7 @@ namespace BMWFanClub.Repositories
                     return await Task.FromResult(mr);
                 }
                 //ef
-                //var users = _context.users.Where(k => k.IsDeleted == EuIsDeleted.No).Select(l => new MUser.Response
+                //var Users = _context.Users.Where(k => k.IsDeleted == EuIsDeleted.No).Select(l => new MUser.Response
                 //{
                 //    Id = l.Id,
                 //    Email = l.Email,
@@ -147,7 +148,7 @@ namespace BMWFanClub.Repositories
                 //}).ToList();
 
                 //lınq
-                var users = (from c in _context.users
+                var users = (from c in _context.Users
                              where (form.Search == null ? true : c.Name.Contains(form.Search.ToLower())) && c.IsDeleted == EuIsDeleted.No
                              select new MUser.Response
                              {
@@ -173,14 +174,14 @@ namespace BMWFanClub.Repositories
             try
             {
                 MethodResponse<MUser.Response> mr = new MethodResponse<MUser.Response>();
-                var currentUser = _context.users.Where(k => k.Id == currentUserId && k.IsDeleted == EuIsDeleted.No).FirstOrDefault();
+                var currentUser = _context.Users.Where(k => k.Id == currentUserId && k.IsDeleted == EuIsDeleted.No).FirstOrDefault();
                 if (currentUser == null)
                 {
                     mr.Status = 400;
                     mr.StatusTexts.Add("Kullanıcı bulunamadı!");
                     return await Task.FromResult(mr);
                 }
-                var user = _context.users.Where(u => u.Id == id && u.IsDeleted == EuIsDeleted.No).FirstOrDefault();
+                var user = _context.Users.Where(u => u.Id == id && u.IsDeleted == EuIsDeleted.No).FirstOrDefault();
                 if (user == null)
                 {
                     mr.Status = 400;
@@ -209,14 +210,14 @@ namespace BMWFanClub.Repositories
             try
             {
                 MethodResponse<MUser.Response> mr = new();
-                var currentUser = _context.users.Where(k => k.Id == currentUserId && k.IsDeleted == EuIsDeleted.No).FirstOrDefault();
+                var currentUser = _context.Users.Where(k => k.Id == currentUserId && k.IsDeleted == EuIsDeleted.No).FirstOrDefault();
                 if (currentUser == null)
                 {
                     mr.Status = 400;
                     mr.StatusTexts.Add("Kullanıcı bulunamadı!");
                     return await Task.FromResult(mr);
                 }
-                var user = _context.users.Where(k => k.Id == form.Id && k.IsDeleted == EuIsDeleted.No).FirstOrDefault();
+                var user = _context.Users.Where(k => k.Id == form.Id && k.IsDeleted == EuIsDeleted.No).FirstOrDefault();
                 if (user == null)
                 {
                     mr.Status = 400;
@@ -282,7 +283,7 @@ namespace BMWFanClub.Repositories
                     return await Task.FromResult(mr);
                 }
 
-                var user = _context.users.Where(k => k.Email == form.Email && k.Password == form.Password.ConvertToMD5() && k.IsDeleted == EuIsDeleted.No).FirstOrDefault();
+                var user = _context.Users.Where(k => k.Email == form.Email && k.Password == form.Password.ConvertToMD5() && k.IsDeleted == EuIsDeleted.No).FirstOrDefault();
                 if (user == null)
                 {
                     mr.Status = 400;
