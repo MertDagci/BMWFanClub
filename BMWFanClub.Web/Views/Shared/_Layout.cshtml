@@ -1,0 +1,83 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="png" href="resim/bmw logo title.png">
+    <title>///M Sports</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/giris.css">
+    <link rel="stylesheet" href="~/css/kayıt.css">
+    <link rel="stylesheet" href="~/css/sifredeğistirme.css">
+</head>
+<body>
+    @* Menu *@
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="ana sayfa.html">
+                <img src="/resim/bmw-logo-675.png " alt="logo" height="30px" width="80px">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active-toggle" aria-current="page" href="/">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active-toggle" aria-current="page" href="/about">Site Hakkında</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active-toggle" aria-current="page" href="/contact">İletişim</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Motor Tipi
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/motortype/gasoline">Benzin</a></li>
+                            <li><a class="dropdown-item" href="/motortype/diesel">Dizel</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/mert.dagci.940" target="_blank">
+                        <i class="fab fa-facebook btn" style="color: #cfcfcf; font-size: 21px;"></i>
+                    </a>
+                    <a href="https://www.instagram.com/merttdgc/" target="_blank">
+                        <i class="fab fa-instagram btn" style="color: #cfcfcf; font-size: 22px;"></i>
+                    </a>
+                </div>
+
+                <div class="login-btn ml-auto">
+                    <a class="btn custom-btn-style" href="/account/login"> Giriş Yap</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    @* Menu *@
+
+    @* Body *@
+    <div class="container">
+        @RenderBody()
+    </div>
+    @* Body *@
+
+    @* Footer *@
+    <div class="bg-dark text-light text-center footer ">
+        <p class="align-middle p-2">
+            <span>All Rights Reserved. &copy; 2023</span><br>
+            <span>Designed By: <b>Mert DAĞCI</b></span>
+        </p>
+    </div>
+    @* Footer *@
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

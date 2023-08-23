@@ -1,0 +1,164 @@
+.resimSlider {
+  width: 1902px;
+  height: 896px;
+  object-fit: cover;
+  }
+
+  .container .row .col-sm-12.col-md-6 p  {
+    color: rgb(207, 207, 207);
+}
+
+.resimSliderCard {
+    height: 200px;
+}
+
+
+.logo {
+    flex: 1;
+    text-align: center;
+}
+
+.custom-btn-style {
+  background-color: rgb(177, 177, 177); 
+  color: #444444; 
+  font-weight: 600;
+  
+}
+
+
+.custom-btn-style:hover,
+.custom-btn-style:active {
+  background-color: #949494; 
+}
+
+/* Dropdown menüsü öğesi için temel stiller */
+.nav-item.dropdown {
+  position: relative;
+}
+
+/* Dropdown menüsü öğesi için temel stiller */
+.nav-item.dropdown {
+  position: relative;
+}
+
+/* Dropdown menüsü açıldığında içeriğini göstermek için stiller */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color: #f7f6f6;
+  border: 1px solid rgb(207, 207, 207);
+  padding: 0;
+  z-index: 9999;
+}
+
+/* Üstüne gelindiğinde dropdown menüyü aç */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown menü öğelerinin stilleri */
+.dropdown-item {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Üstüne gelindiğinde farklı bir renk uygula */
+.dropdown-item:hover {
+  background-color: rgb(177, 177, 177);
+}
+
+
+.resimHakkimda{
+    height: 320px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+  
+  
+  .figure {
+    transition: transform 0.3s ease;
+  }
+
+  /* Fotoğrafın üzerine gelindiğinde büyüme efekti */
+  .figure:hover {
+    transform: scale(1.2);
+  }
+  
+
+  
+  .grid-container {
+    display: grid;
+    grid-template-rows: 1fr auto; /* İçerik ve footer için sırasıyla 1fr (esnek alan) ve otomatik yükseklik belirliyoruz */
+    min-height: 100vh; /* Sayfanın en az 100% yüksekliğini kaplamasını sağlar */
+  }
+  
+  /* Footer'ı en alta sabitlemek için position ve bottom özelliklerini kullanıyoruz */
+ 
+  .image-container{
+    margin-top: 20px;
+  }
+
+  .features-list {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f1f1f1;
+}
+
+.features-list li {
+    padding: 8px;
+}
+
+
+
+.divider {
+  border-top: 2px solid rgb(207, 207, 207); /* Çizginin rengi ve kalınlığı */
+  margin: 10px 30px; /* İstenirse çizgiye boşluk ekleyebilirsiniz */
+}
+
+.my-text-beyazımsı{
+  color: rgb(207, 207, 207) !important;
+}
+
+.social-icons i {
+  padding: 0;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.login-btn a{
+  padding: 2;
+  margin-left: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+.background-color{
+  background: rgb(177, 177, 177);
+  
+}
+
+
+

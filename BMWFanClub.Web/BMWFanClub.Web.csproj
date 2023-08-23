@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\resim\1..jpg" />
+    <None Include="wwwroot\resim\3..jpeg" />
+    <None Include="wwwroot\resim\420d cabrio.jpg" />
+    <None Include="wwwroot\resim\bmw logo title.png" />
+    <None Include="wwwroot\resim\bmw-logo-675.png" />
+    <None Include="wwwroot\resim\BMW-M5-E60-1.webp" />
+    <None Include="wwwroot\resim\bmw_e60.jpg" />
+    <None Include="wwwroot\resim\e60.jpeg" />
+    <None Include="wwwroot\resim\Ekran görüntüsü 2023-07-26 100722.png" />
+    <None Include="wwwroot\resim\Ekran görüntüsü 2023-07-26 100738.png" />
+    <None Include="wwwroot\resim\facebook.png" />
+    <None Include="wwwroot\resim\galeri.png" />
+    <None Include="wwwroot\resim\hakkında.webp" />
+    <None Include="wwwroot\resim\instagram.png" />
+    <None Include="wwwroot\resim\kayıt.jpg" />
+    <None Include="wwwroot\resim\logo.png" />
+    <None Include="wwwroot\resim\motor.jpeg" />
+    <None Include="wwwroot\resim\motor.jpg" />
+    <None Include="wwwroot\resim\motor2.jpeg" />
+    <None Include="wwwroot\resim\slider1. foto.jpeg" />
+    <None Include="wwwroot\resim\twitter.png" />
+    <None Include="wwwroot\resim\wp2627202-bmw-e60-wallpaper.jpg" />
+    <None Include="wwwroot\resim\wp2627219-bmw-e60-wallpaper .jpg" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="my-3 bg-light p-4 p-sm-5 rounded-3">
+    <div class="row align-items-center" ng-cloak>
+        <div class="col-md-6">
+            <h1 class="display-5">İletişim Formu</h1>
+            <p class="fs-5">
+                Bizimle iletişime geçmek için formu doldurabilirsiniz.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <div class="form mb-3">
+                <input type="text" class="form-control" placeholder="Ad Soyad" />
+            </div>
+            <div class="form mb-3">
+                <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form mb-3">
+                <input type="tel" class="form-control" placeholder="Telefon">
+            </div>
+            <div class="form mb-3">
+                <textarea class="form-control" rows="3" placeholder="Görüşmek istediğiniz konu nedir?"></textarea>
+            </div>
+            <div class="form">
+                <button class="btn btn-primary w-100"><i class="fa-regular fa-envelope"></i> Gönder</button>
+            </div>
+        </div>
+    </div>
+</div>
